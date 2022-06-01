@@ -12,18 +12,26 @@ body {
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 1440px;
-    margin-top: 10vh;
-
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    gap: 10vw;
     img {
       min-width: 360px;
+      min-height: calc(330 / 550 * 360px);
       width: calc(505 / 1440 * 100vw);
+      height: calc(330 / 1440 * 100vw);
       margin: 1rem;
+      object-fit: cover;
     }
     article {
-      width: 26vw;
+      width: calc(380 / 1440 * 100vw);
+
       min-width: 270px;
       color: #121212;
-
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
       header {
         h1 {
           font-family: "Roboto";
@@ -32,6 +40,7 @@ body {
           font-size: 2.62rem;
           line-height: 120%;
           margin-bottom: 1.5rem;
+          margin-top: 0;
         }
       }
       p {

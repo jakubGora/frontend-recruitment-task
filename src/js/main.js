@@ -3,7 +3,6 @@ const closeBtn = document.getElementsByClassName("close-btn")[0];
 const alertWin = document.getElementsByClassName("alert")[0];
 const clickN = document.getElementById("nOfClicks");
 const zerowanieBtn = document.getElementsByClassName("setNull-btn")[0];
-//localStorage.setItem("clicked", 0);
 
 zerowanieBtn.addEventListener("click", () => {
   localStorage.setItem("clicked", 0);
