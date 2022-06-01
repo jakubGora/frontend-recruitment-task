@@ -4,23 +4,24 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
+
   flex-wrap: wrap;
   min-width: 400px;
   section {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
     width: 1440px;
-    margin-top: 5vh;
+    margin-top: calc(96 / 960 * 100vh);
     margin-bottom: 5vh;
-    gap: 10vw;
+    gap: calc(95 / 1440 * 100vw);
     img {
       min-width: 360px;
       min-height: calc(330 / 550 * 360px);
       width: calc(505 / 1440 * 100vw);
       height: calc(330 / 1440 * 100vw);
-      margin: 1rem;
+
       object-fit: cover;
     }
     article {
@@ -77,13 +78,13 @@ body {
 
   aside {
     display: none;
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     min-width: 400px;
     background-color: rgba(0, 0, 0, 0.644);
     .content {
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -142,13 +143,41 @@ body {
       .setNull-btn:hover {
         background-color: #e4c1ae;
       }
+      .setNull-btn::after {
+        display: block;
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        transform: translateY(0.4rem);
+        height: 0rem;
+        width: 0rem;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        background-color: #e4c1ae;
+        transition: all ease 1s;
+      }
+      .setNull-btn::before {
+        display: block;
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 0;
+        transform: translateY(-0.4rem);
+        height: 0rem;
+        width: 0rem;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        background-color: #e4c1ae;
+        transition: all ease 1s;
+      }
       .setNull-btn:hover::after {
         display: block;
         position: absolute;
         content: "";
         left: 0;
         bottom: 0;
-        transform: translateY(0.5rem);
+        transform: translateY(0.4rem);
         width: 100%;
         height: 0.5rem;
         border-bottom-left-radius: 0.5rem;
@@ -163,7 +192,7 @@ body {
         content: "";
         right: 0;
         top: 0;
-        transform: translateY(-0.5rem);
+        transform: translateY(-0.4rem);
         width: 100%;
         height: 0.5rem;
         border-top-left-radius: 0.5rem;
