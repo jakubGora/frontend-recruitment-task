@@ -19,7 +19,7 @@ articleBtn.addEventListener("click", () => {
   );
   clickN.innerHTML = localStorage.getItem("clicked") || 1;
   if (Number(localStorage.getItem("clicked")) > 5)
-    resetBtn.style.display = "block";
+    resetBtn.style.display = "flex";
   else resetBtn.style.display = "none";
 });
 
